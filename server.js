@@ -34,7 +34,7 @@ app.get('/', (req, res)=> {
     res.send('success')
 });
 
-app.use(express.static('public'))
+app.use(express.static('http://localhost:3000/public'))
 
 app.post('/signin', (req, res)=> { signin.handleSignin(req, res, db, bcrypt)});
 app.post('/register', (req, res)=> { register.handleRegister(req, res, db, bcrypt)});
